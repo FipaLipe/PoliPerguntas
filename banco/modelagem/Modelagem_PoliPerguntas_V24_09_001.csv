@@ -1,0 +1,12 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Text Area 3,Text Area 4,Text Area 5,Text Area 6,Text Area 7,Text Area 8,Text Area 9,Text Area 10,Text Area 11,Text Area 12,Text Area 13,Text Area 14,Text Area 15,Text Area 16,Text Area 17,Text Area 18,Text Area 19,Text Area 20,Text Area 21,Comments
+1,Document,,,,,,,,,Draft,PoliPerguntas,,,,,,,,,,,,,,,,,,,,,
+2,Page,,,,,,,,,,Page 1,,,,,,,,,,,,,,,,,,,,,
+3,Entity,Entity Relationship,2,,,,,,,,perguntas,id_pergunta,INTEGER (PK),id_user_adicionou,INTEGER (FK),texto,VARCHAR(255),imagem,VARCHAR(200),disciplina,TIMESTAMP,situacao,CHAR(1),dt_aberta,TIMESTAMP,dt_fechada,TIMESTAMP,,,,,
+4,Entity,Entity Relationship,2,,,,,,,,alternativas,id_alternativa,INTEGER (PK),id_pergunta,INTEGER (FK),correta,BOOL,texto,VARCHAR(200),imagem,VARCHAR(200),,,,,,,,,,,
+5,Entity,Entity Relationship,2,,,,,,,,users,id_user,INTEGER (PK),rm,VARCHAR(6),nome,VARCHAR(100),senha,VARCHAR(200),pontos,INTEGER,imagem,VARCHAR(64),admin,BOOL,situacao,CHAR(1),dt_criado,TIMESTAMP,dt_alterado,TIMESTAMP,
+6,Entity,Entity Relationship,2,,,,,,,,respostas,id_resposta,INTEGER (PK),id_pergunta,INTEGER (FK),id_alternativa,INTEGER (FK),id_user,INTEGER (FK),dt_respondida,TIMESTAMP,,,,,,,,,,,
+7,Line,,2,,,6,3,CFN ERD One Arrow,CFN ERD One Arrow,,,,,,,,,,,,,,,,,,,,,,,
+8,Line,,2,,,4,6,CFN ERD One Arrow,CFN ERD One Arrow,,,,,,,,,,,,,,,,,,,,,,,
+9,Line,,2,,,5,6,CFN ERD One Arrow,CFN ERD One Arrow,,,,,,,,,,,,,,,,,,,,,,,
+10,Line,,2,,,4,3,CFN ERD Many Arrow,CFN ERD One Arrow,,,,,,,,,,,,,,,,,,,,,,,
+11,Line,,2,,,3,5,CFN ERD Many Arrow,CFN ERD One Arrow,,,,,,,,,,,,,,,,,,,,,,,
