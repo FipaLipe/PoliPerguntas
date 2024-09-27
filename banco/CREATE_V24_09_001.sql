@@ -18,7 +18,7 @@ CREATE TABLE alternativas (
 );
 
 CREATE TABLE users (
-	id_user INTEGER NOT NULL PRIMARY KEY,
+	id_user INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     rm VARCHAR(8) NOT NULL UNIQUE,
     nome VARCHAR(100) NOT NULL,
     senha VARCHAR(200) NOT NULL,
@@ -48,7 +48,7 @@ ALTER TABLE respostas
 ADD FOREIGN KEY(id_pergunta) REFERENCES perguntas(id_pergunta);
 
 ALTER TABLE respostas
-ADD FOREIGN KEY(id_alternativa) REFERENCES perguntas(id_alternativa);
+ADD FOREIGN KEY(id_alternativa) REFERENCES alternativas(id_alternativa);
 
 ALTER TABLE respostas
-ADD FOREIGN KEY(id_user) REFERENCES perguntas(id_user);
+ADD FOREIGN KEY(id_user) REFERENCES users(id_user);
