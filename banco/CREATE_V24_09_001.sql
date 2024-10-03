@@ -4,7 +4,7 @@ CREATE TABLE perguntas (
     texto VARCHAR(255),
     imagem VARCHAR(200),
     dt_criada TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    situacao CHAR(1) NOT NULL DEFAULT 'I',
+    situacao CHAR(1) NOT NULL DEFAULT 'A',
     dt_aberta TIMESTAMP,
     dt_fechada TIMESTAMP
 );

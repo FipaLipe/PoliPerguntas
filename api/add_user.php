@@ -1,7 +1,7 @@
 <?php
 
-require "/../utils/conexao.php";
-require "/../utils/get_json_data.php";
+require_once "/../utils/conexao.php";
+require_once "/../utils/get_json_data.php";
 
 $SQL_TEXT = "INSERT INTO users(rm, nome, senha) VALUES(:rm, :nome, :senha)";
 
