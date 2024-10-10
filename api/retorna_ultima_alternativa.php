@@ -2,8 +2,8 @@
 
 require_once "/../utils/conexao.php";
 
-function RetornaUltimaPergunta() {
-    $SQL_TEXT = "SELECT id_pergunta FROM perguntas ORDER BY id_pergunta DESC LIMIT 1";
+function RetornaUltimaAlternativa() {
+    $SQL_TEXT = "SELECT id_alternativa FROM alternativas ORDER BY id_alternativa DESC LIMIT 1";
     
     try {
         global $conn;
@@ -14,8 +14,7 @@ function RetornaUltimaPergunta() {
         return $result <> '' ? $result : -1;
     
     } catch (Exception $e) {
-        return "Erro ao obter última pergunta" . $e->getMessage();
+        return "Erro ao obter última alternativa" . $e->getMessage();
     }
 }
-
 ?>

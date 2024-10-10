@@ -17,7 +17,7 @@ try {
     $stmt = $conn->prepare($SQL_TEXT);
     $stmt->bindParam(':id_user_adicionou', $data->id_user_adicionou);
     $stmt->bindParam(':texto',             $data->texto);
-    $stmt->bindParam(':imagem',            $imagem);
+    $stmt->bindParam(':imagem',            explode('api/..', $imagem)[1]);
     $stmt->bindParam(':dt_aberta',         $data->dt_aberta);
     $stmt->bindParam(':dt_fechada',        $data->dt_fechada);
 
