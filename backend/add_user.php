@@ -15,7 +15,7 @@ try {
     $stmt->execute();
 
 } catch (Exception $e) {
-    echo "Erro ao inserir usuário no banco de dados: " . $e->getMessage();
+    echo '{"Erro ao inserir usuário no banco de dados: "' . $e->getMessage() . '}';
 }
 
 ?>

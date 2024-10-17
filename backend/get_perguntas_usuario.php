@@ -18,7 +18,7 @@ $SQL_TEXT = "SELECT P.id_pergunta,                                   " .
 try {
     global $conn;
     $stmt = $conn->prepare($SQL_TEXT);
-    $stmt.bindParam('id_user', $data->id_user)
+    $stmt->bindParam('id_user', $data->id_user);
     $stmt->execute(); 
 
     $perguntas = $stmt->fetchAll();
