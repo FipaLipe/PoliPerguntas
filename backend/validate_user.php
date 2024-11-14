@@ -1,23 +1,28 @@
 <?php
+function validaUsuario($rm, $senha){
 
-require_once "/../utils/conexao.php";
-require_once "/../utils/get_json_data.php";
+    require_once __DIR__ . "/../utils/conexao.php";
 
-$SQL_TEXT = "SELECT senha FROM users WHERE rm = :rm";
+    if(empty($rm) || empty($senha)){
+        return '';
+    }
 
-try {
+    $SQL_TEXT = "SELECT senha, id_user FROM users WHERE rm = :rm";
 
-    $stmt = $conn->prepare($SQL_TEXT);
-    $stmt->bindParam(':rm', $data->rm);
+    try {
+        $stmt = $conn->prepare($SQL_TEXT);
+        $stmt->bindParam(':rm', $rm);
 
-    $stmt->execute();
-    $hashed_senha = $stmt->fetchColumn();
+        $stmt->execute();
+        $dados = $stmt->fetch();
+        $hashed_senha = $dados['senha'];
 
-    $result = password_verify($data->senha, $hashed_senha);
-    echo $result;
+        $result = password_verify($senha, $hashed_senha);
+        return $result?$dados['id_user']:'';
 
-} catch (Exception $e) {
-    echo "Erro ao validar usuário" . $e->getMessage();
+    } catch (Exception $e) {
+        return "Erro ao validar usuário" . $e->getMessage();
+    }
 }
 
 ?>
