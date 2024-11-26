@@ -14,18 +14,23 @@
             <img src="/public/assets/img/logo-politec.png" alt="logo-politec" class="w-44 justify-self-center mb-6">
             <h1 class="text-xl font-bold text-center mb-2 text-red-500">PoliPerguntas - Acesso</h1>
 
-            <p class="text-xl font-regular text-center mb-5 text-red-500"> Não foi possível encontrar suas credenciais.
+            <p class="text-xl font-regular text-center mb-5 text-red-500"> Você não tem acesso a essa funcionalidade.
                 Por favor se conecte novamente. </p>
             <br>
-            <br>
-            <br>
-            <br>
-            <a href="/login">
-                <button class="transition-all duration-300 w-80 p-3 bg-blue-500 text-white font-semibold rounded-md text-lg
+            <div class="flex flex-row w-full gap-x-2">
+                <div class="w-6/12"><a href="/login">
+                    <button class="transition-all duration-300 w-full p-3 bg-blue-500 text-white font-semibold rounded-md text-lg
                     hover:bg-blue-600" type="submmit" name="btn-login" href="/login">
-                    Login
-                </button>
-            </a>
+                        Login
+                    </button>
+                </a></div>
+                <div class="w-6/12"><a href="/home">
+                    <button class="transition-all duration-300 w-full p-3 bg-blue-500 text-white font-semibold rounded-md text-lg
+                    hover:bg-blue-600" type="submmit" name="btn-login" href="/home">
+                        Home
+                    </button>
+                </a></div>
+            </div>
         </div>
     </div>
 </body>

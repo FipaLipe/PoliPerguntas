@@ -28,6 +28,7 @@ $erros = explode('|', isset($_SESSION['error'])?$_SESSION['error']:'');
                 }
             ?>
             <form id="form_cadastro" action="/api/add_user" method="post" class="flex flex-col">
+                <input type="hidden" name="session_name" value="cadastro" readonly="true">
                 <input type="text" name="rm" placeholder="RM" class="border-2 rounded-t-lg w-80 h-14 p-4 <?php echo (in_array('falta_rm', $erros) or in_array('23000', $erros))?'border-red-500':'';?>" value="<?php echo isset($_SESSION['rm_cadastro'])?$_SESSION['rm_cadastro']:'' ?>" maxlength="6">
                 <input type="text" name="nome" placeholder="Nome" class="border-2 w-80 h-14 p-4 rounded-b-lg <?php echo (in_array('falta_nome', $erros))?'border-red-500':'';?>" value="<?php echo isset($_SESSION['nome_cadastro'])?$_SESSION['nome_cadastro']:'' ?>" maxlength="100">
                 <br>

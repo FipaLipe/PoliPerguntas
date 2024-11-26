@@ -9,6 +9,7 @@ session_start();
 
 $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+
 switch ($request) {
     case '/':
         include 'public/login.php';
@@ -22,14 +23,35 @@ switch ($request) {
     case '/home':
         include 'public/home.php';
         break;
+    case '/admin':
+        include 'public/admin.php';
+        break;
     case '/cadastro';
         include 'public/cadastro.php';
         break;
     case '/acesso_negado';
         include 'public/acesso_negado.php';
         break;
+    case '/admin/usuarios';
+        include 'public/usuarios/usuario_consulta.php';
+        break;
+    case '/admin/usuarios/consulta';
+        include 'public/usuarios/usuario_consulta.php';
+        break;
+    case '/admin/usuarios/cadastro';
+        include 'public/usuarios/usuario_cadastro.php';
+        break;
+    case '/admin/usuarios/atualiza';
+        include 'public/usuarios/usuario_atualiza.php';
+        break;
+    case '/api/delete_user';
+        include 'backend/delete_user.php';
+        break;
     case '/api/add_user';
         include 'backend/add_user.php';
+        break;
+    case '/api/alter_user';
+        include 'backend/alter_user.php';
         break;
     case '/api/valida_login';
         include 'backend/valida_login.php';
