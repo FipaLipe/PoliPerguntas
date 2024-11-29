@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/../utils/conexao.php";
 
-$SQL_TEXT = "INSERT INTO perguntas(id_user_adicionou, texto, dt_aberta, dt_fechada) VALUES(:id_user_adicionou, :texto, :dt_aberta, :dt_fechada)";
+$SQL_TEXT = "UPDATE perguntas SET id_user_adicionou = :id_user_adicionou, texto = :texto, dt_aberta = :dt_aberta, dt_fechada = :dt_fechada WHERE id_pergunta = :id_pergunta";
+$SQL_TEXT_ALT_DEL = "DELETE FROM alternativas WHERE id_pergunta = :id_pergunta";
 $SQL_TEXT_ALT = "INSERT INTO alternativas(id_pergunta, correta, texto) VALUES(:id_pergunta, :correta, :texto)";
 
+$id_pergunta = $_POST['id_pergunta'];
 $texto = $_POST['texto'];
 $session = $_POST['session_name'];
 $id_user_adicionou = $_POST['id_user_adicionou'];
@@ -61,16 +63,21 @@ if ($error != '') {
     $_SESSION['error'] = $error;
     // var_dump($alternativas);
     // var_dump($_SESSION);
-    header('Location: /' . $session);
+    header('Location: /' . $session . '?id_pergunta=' . $id_pergunta);
     exit();
 }
 
 try {
+    $stmtALTDEL = $conn->prepare($SQL_TEXT_ALT_DEL);
+    $stmtALTDEL->bindParam('id_pergunta', $id_pergunta);
+    $stmtALTDEL->execute();
+
     $stmt = $conn->prepare($SQL_TEXT);
     $stmt->bindParam(':id_user_adicionou', $id_user_adicionou);
     $stmt->bindParam(':texto', $texto);
     $stmt->bindParam(':dt_aberta', $dt_aberta);
     $stmt->bindParam(':dt_fechada', $dt_fechada);
+    $stmt->bindParam('id_pergunta', $id_pergunta);
     $stmt->execute();
 
     $pergunta = $conn->lastInsertId();
@@ -111,7 +118,7 @@ try {
     $error = $error . '|' . $e->getMessage();
 
     $_SESSION['error'] = $error;
-    header('Location: /' . $session);
+    header('Location: /' . $session . '?id_pergunta=' . $id_pergunta);
     exit();
 }
 

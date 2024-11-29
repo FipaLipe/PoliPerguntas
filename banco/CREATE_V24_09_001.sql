@@ -10,7 +10,7 @@ CREATE TABLE perguntas (
 );
 
 CREATE TABLE alternativas (
-	id_alternativa INTEGER NOT NULL PRIMARY KEY,
+	id_alternativa INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_pergunta INTEGER NOT NULL,
     correta BOOLEAN NOT NULL,
     texto VARCHAR(200),

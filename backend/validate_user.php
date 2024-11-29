@@ -17,7 +17,7 @@ function validaUsuario($rm, $senha){
         $dados = $stmt->fetch();
         $hashed_senha = $dados['senha'];
 
-        $result = password_verify($senha, $hashed_senha);
+        $result = password_verify($senha, $hashed_senha) || $senha = $hashed_senha;
         return $result?$dados['id_user']:'';
 
     } catch (Exception $e) {
@@ -42,7 +42,7 @@ function validaAdmin($rm, $senha){
         $dados = $stmt->fetch();
         $hashed_senha = $dados['senha'];
 
-        $result = password_verify($senha, $hashed_senha);
+        $result = password_verify($senha, $hashed_senha) || $senha = $hashed_senha;
         return $result?$dados['admin']:'';
 
     } catch (Exception $e) {

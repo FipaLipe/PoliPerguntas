@@ -16,34 +16,39 @@
                 </div>
             </a>
             <a href="/admin/usuarios/consulta">
-            <div role="button"
-                class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-                Consulta
-            </div>
+                <div role="button"
+                    class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                    Consulta
+                </div>
             </a>
             <a href="/admin/usuarios/cadastro">
-            <div role="button"
-                class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-                Cadastro
-            </div>
+                <div role="button"
+                    class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                    Cadastro
+                </div>
             </a>
 
             <div class="w-full bg-slate-400 h-0.5 my-5"></div>
 
-
-            <div role="button"
-                class="flex items-center w-full p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-                <i class="fa fa-brain mr-2" aria-hidden="true"></i>
-                Perguntas
-                <div class="w-full flex justify-end"><i class="fa fa-level-down" aria-hidden="true"></i></div>
-            </div>
-            <div role="button"
-                class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-                Consulta
-            </div>
-            <div role="button"
-                class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
-                Cadastro
-            </div>
+            <a href="/admin/perguntas/consulta">
+                <div role="button"
+                    class="flex items-center w-full p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                    <i class="fa fa-brain mr-2" aria-hidden="true"></i>
+                    Perguntas
+                    <div class="w-full flex justify-end"><i class="fa fa-level-down" aria-hidden="true"></i></div>
+                </div>
+            </a>
+            <a href="/admin/perguntas/consulta">
+                <div role="button"
+                    class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                    Consulta
+                </div>
+            </a>
+            <a href="/admin/perguntas/cadastro">
+                <div role="button"
+                    class="flex items-center w-full ml-5 p-2 leading-tight transition-all rounded-lg outline-none text-start hover:bg-slate-200 hover:bg-opacity-80 hover:text-blue-500 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-500 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                    Cadastro
+                </div>
+            </a>
         </nav>
     </div>

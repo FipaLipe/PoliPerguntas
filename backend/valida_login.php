@@ -31,7 +31,7 @@ if (!$loginCorreto) {
     header('Location: /login');
 } else {
     $_SESSION['user'] = $rm;
-    $_SESSION['senha'] = $senha;
+    $_SESSION['senha'] = password_hash($senha, PASSWORD_DEFAULT);
     header('Location: /home');
 }
 
