@@ -77,6 +77,9 @@ switch ($request) {
     case '/api/valida_login';
         include 'backend/valida_login.php';
         break;
+    case '/api/responde';
+        include 'backend/responde.php';
+        break;
     default;
         echo 'ERRO 404: Caminho não encontrado (' . $request . ')';
 }

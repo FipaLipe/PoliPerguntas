@@ -77,7 +77,7 @@ try {
     // echo $pergunta;
 
     $stmtALT = $conn->prepare($SQL_TEXT_ALT);
-    for ($i = 1; $i <= 5; $i++) {
+    for ($i = 0; $i < 5; $i++) {
         if (!empty($alternativas[$i])) {
             $stmtALT->bindParam('id_pergunta', $pergunta);
             $stmtALT->bindParam('correta', $corretas[$i]);
